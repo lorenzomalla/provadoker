@@ -18,7 +18,7 @@ public class AnagraficaStudente implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 
-	private String città;
+	private String citta;
 
 	@Column(name="codice_postale")
 	private String codicePostale;
@@ -40,12 +40,12 @@ public class AnagraficaStudente implements Serializable {
 		this.id = id;
 	}
 
-	public String getCittà() {
-		return this.città;
+	public String getcitta() {
+		return this.citta;
 	}
 
-	public void setCittà(String città) {
-		this.città = città;
+	public void setcitta(String citta) {
+		this.citta = citta;
 	}
 
 	public String getCodicePostale() {
