@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="Universita" transaction-type="JTA">
+	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+	<jta-data-source>java:jboss/jdbc/scuolaDS</jta-data-source>
+	<mapping-file>META-INF/orm.xml</mapping-file>
+	<class>org.stepsrl.model.AnagraficaStudente</class>
+	<class>org.stepsrl.model.Professori</class>
+	<class>org.stepsrl.model.Studenti</class>
+	<class>org.stepsrl.model.User</class>
+	<class>org.stepsrl.model.CorsiDiLaurea</class>
+	<class>org.stepsrl.model.CorsoDiLaureaSpecifico</class>
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
+<!-- 			<property name="hibernate.hbm2ddl.auto" value="update" /> -->
+<!-- 			<property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.SunOneJtaPlatform"/> -->
+			<property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.JBossAppServerJtaPlatform" />
+			<property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>
+		</properties>
+	</persistence-unit>
+</persistence>
