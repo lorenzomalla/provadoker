@@ -204,6 +204,9 @@
 				<filtering>true</filtering>
 			</testResource>
 		</testResources>
+		<profiles>
+		<profile>
+		<id>openshift<id>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -236,4 +239,6 @@
 			<!-- </plugin> -->
 		</plugins>
 	</build>
+	</profile>
+	</profiles>
 </project>
